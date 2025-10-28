@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise with then and catch</title>
+</head>
+<body>
+    <script>
+      var mypromise= new Promise((resolve,reject)=>{
+        n=6;
+        if(n % 2 === 0)
+            {
+            resolve();
+           }else
+           {
+            reject();
+           }
+      }); //promise executor
+
+      mypromise .then(()=>{
+        console.log("Promise resolve");
+      }).catch(()=>{
+        console.log("Promise Rejected");
+      });
+
+      var promise2 = new Promise((resolve,reject)=>{
+        n=29;
+        if(n % 2 === 0)
+      {
+        console.log("Even Number");
+      }
+      else{
+        console.log("Odd Number");
+      }
+      }); //promise Executor
+
+      promise2.then((msg)=>{
+          console.log(msg); 
+      }).catch((msg)=>{
+          console.log(msg); 
+      })
+            
+    </script>
+</body>
+</html>

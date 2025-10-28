@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <form action="https://www.google.com" onsubmit="return validate()"><!--First it will call onsubmit event then it will call action-->
+    <input type="text" placeholder="Enter name" id="name-field" onkeyup="validateName()"> <!--When field value will change then onchange will change -->
+    <span id="name-error"></span>                                     <!--When we up our key then on keyup will be fired-->
+    <br><br>
+
+    <input type="text" placeholder="Enter Phone Number"><br><br>
+
+    <input type="email" placeholder="Enter email"><br><br>
+
+    <input type="password" placeholder="Enter password"><br><br>
+
+    <button type="submit">Sign Up</button>
+    </form>
+
+    <script>
+        function validateName(){
+             var name=document.getElementById("name-field").value;
+             if(name.length === 0){
+                
+             }
+        }
+           function validate(){
+               var name = document.getElementById("name-field").value;
+               if(name.length === 0){
+                document.getElementById("name-error").innerHTML="Name is Required";
+                 return false;
+               }
+               return true;
+           }
+    </script>
+</body>
+</html>

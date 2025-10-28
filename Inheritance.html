@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A{
+            constructor(){
+                this.a=10;
+                this.b=20;
+            }
+        }
+        class B extends A{
+           constructor(){
+            super();//super() calls parent constructor.
+            //need to call super explicitly to access parent and its child properties
+            this.z=90;
+           }
+        }
+        var bobj = new B();
+        console.log(bobj.a,bobj.b,bobj.z);
+    </script>
+</body>
+</html>

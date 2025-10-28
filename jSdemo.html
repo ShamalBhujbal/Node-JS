@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Code</title>
+</head>
+<body>
+    <!-- we dont need to create object for JS-->
+    <script>
+        document.write("Hello word !!");
+        document.write("<h1>Heading text</h1>");
+        console.log("This is log msg");
+       // window.alert("Hello !!"); /* without window we can run alert*/
+       // alert("welcome");
+        a=10;
+        b="shamal";
+        console.log(a);
+        console.log(typeof a);
+        console.log(b);
+        console.log(typeof b);//string
+        console.log(a,b); //concat 
+
+        console.log("value of a = "+a+"value of b is ="+b); //+ is concat operation
+        c =true;
+        console.log(c,typeof c);
+
+        n1=10;
+        n2=20
+        n3 = n1+n2;
+        msg="sum of " +n1+ " and " +n2 +" is = "+n3; 
+        //this is small sentence we use syntax repetedly and also it is complex.poor redability.
+        console.log(msg);
+        
+        msg2=`sum of ${n1} and ${n2} is ${n3}`; //for better redability and concatination.
+        console.log(msg2);
+        
+        A=5;
+        B=5.0
+        console.log(A==B); //true
+
+        v1 = 5;
+        v2="5"
+        console.log(v1==v2);//true it will take 5 as a number here
+
+        // one is numeric other is string value but having numeric part in it it will considered it as a numeric//
+        // === will check both value and type and cant convert it automatically it is always recommended//
+
+        console.log(v1 === v2);//returns false 
+        
+        v3=5;
+        v4=7;
+        v5=v3>v4 ? v3 : v4;
+        console.log(v5);
+       
+        //print no. is positive or not
+
+        v6=-1;
+        if(v6 >= 0){
+            console.log("Number is positive");
+        }
+        else{
+            console.log("Number is negative");
+        }
+
+        /* Home work 
+        91 - 100 = a+
+        81-90 a
+        71-80 b +
+        <= 70 fail
+        */
+
+        rollno = 182 ;
+        if(rollno === 182){
+            console.log("Shamal");
+        }
+        else if(rollno === 183){
+            console.log("Shantanu");
+        }
+        else if(rollno === 184)
+        {
+            console.log("ShashiBhushan");
+        }
+        else{
+            console.log("Not found"); //when all abov conditions are false then it prints else block
+        }
+        //Switch case //
+        roll=184;
+        switch(roll){
+            case 182: console.log("shamal");
+            break;
+            case 183:console.log("Shantanu");
+            break;
+            case 184: console.log("Shashibhushan");
+            break;
+            default:
+                console.log("Not found");
+
+        }
+
+       //loops //
+       number1 =1;
+       while(number1 <= 5)
+       {
+        console.log(number1);
+        number1++;
+       }
+       //nested loop //
+       for(i =1;i<=5;i++){
+            for(j = 1 ;j<= 5;j++){
+                 console.log("*");
+            } 
+       }  
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var show =()=>{
+        console.log("Hello world!!");
+       }
+       show();
+
+       var sum=(a,b)=>
+         a+b; //single statement then dont need {} , and if that one state is a return state then dont need return keyword
+       var rs=sum(3,6);
+       console.log(rs);
+
+       var arr=[10,20,30,40,11,22,33,55,77,100];
+       var evenArray=[];
+       arr.forEach((value,index)=>{
+        if(value % 2 == 0){
+            evenArray.push(value);
+        }
+       })
+       console.log(evenArray);
+
+         var arr2=[10,20,30,40,11,22,33,55,77,100];
+         var newArray =  arr2.filter(value=>value % 2 ==0); 
+         console.log(newArray);//it will return filterd data
+
+         //modify and prepare new array
+         //map function
+        
+        var newa = arr2.map(value=>2 * value);
+         console.log(newa);
+
+
+         setTimeout(()=>{
+             console.log("inside timeout");
+         },2000) //it will wait 2000 milisec then callback function will be exexuted.
+         //it is not block rest program
+         console.log("hello word"); //hello word then inside timeout
+    </script>
+</body>
+</html>

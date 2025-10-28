@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json3</title>
+</head>
+<body>
+    <script>
+        o1={id:101,
+            name:'shamal'
+        }
+        o2={
+            phone:'98689098',
+            email:'abc@gmail.com'
+        }
+        o3={...o1,...o2};
+        console.log(o3);
+
+
+        price =1000;
+        prduct={id:101,name:'keyboard',price}; 
+        //when variable name and the key name both are same .then no need to write 2 times price
+        console.log(prduct);
+        
+        x='price';
+        obj2={[x] : 2500}  //here we get key name as price
+        console.log(obj2);
+        //function for printing addition of 2 numbers
+        function add(a,b){
+             c=a+b;
+             return c; //it will returns the value of c. 
+             //it is last statement of any method.
+        }
+       sum= add(30,40);
+       console.log(sum);
+     
+       // function for finding max value
+       function Findmax(a,b){
+             if(a > b){
+                return a;
+             }
+             else{
+                return b;
+             }
+       }
+       m = Findmax(10,40);
+       console.log(m);
+
+      var temp=5; // directly declaring variable like this it is goes into the window directly .
+       //when var declared as inside function or outside function without any keyword both are threated as same.
+       function show(){
+       //var temp=5;
+        console.log("Inside show temp= ",temp);
+       }
+      show();
+      console.log("Outside show temp =",temp);
+    </script>
+</body>
+</html>

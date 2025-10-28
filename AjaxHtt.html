@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fechData()">Fetch Data</button>
+    <table border="1" cellspacing="0" cellpading="10">
+        <thead>
+            <th>id</th>
+        <th>name</th>
+        <th>phone</th>
+        <th>username</th>
+        <th>email</th>
+    </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        function fechData(){
+        var xhr = new XMLHttpRequest();//step1
+        xhr.open('GET',"https://jsonplaceholder.typicode.com/users");//step2
+        xhr.send();//step 3
+        xhr.onreadystatechange=()=>{ //this will be call every time when readystatechange eent will fire.
+            if(xhr.readyState === 4){
+                console.log(xhr.responseText);
+               var responseData = JSON.parse(xhr.responseText)//it gives actual array or actual data.
+               console.log(responseData);
+
+                var tbody=document.getElementById("table-Body");
+                for(user of responseData){ // array of json object responseData
+                    //console.log(user);
+                    document.createElement("tr");
+                    document.createElement("td");
+
+                    
+
+                }
+            }
+             
+        }
+        }
+    </script>
+    
+</body>
+</html>
